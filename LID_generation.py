@@ -1,3 +1,6 @@
+#some of the code is modified from https://github.com/xiaoboxia/T-Revision
+#and https://github.com/xingjunm/dimensionality-driven-learning/blob/master/train_models.py
+
 from __future__ import absolute_import
 from __future__ import print_function
 
