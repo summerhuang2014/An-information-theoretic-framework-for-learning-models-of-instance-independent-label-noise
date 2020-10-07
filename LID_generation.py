@@ -223,6 +223,7 @@ if __name__ == "__main__":
 
     class_no = 0
 
+    #the preset 10 random seeds
     for seed in [0, 235, 905, 2048, 4096, 5192, 7813, 11946, 16860, 35715]:
         print('Gathering LID sequences for random seed', seed)
         for a in abase:
