@@ -1,7 +1,7 @@
 ## Code to the ICLR 2021 submission "An information-theoretic framework for learning models of instance-independent label noise": https://openreview.net/forum?id=zYmnBGOZtH
 
 
-### 1. We require PU model's prediction and matrix priors to estimate noise transition matrices, which both take some time to compute. Some example data (prior matrices and retrain csv data) is provided, please note that the prior file and retrain file should match with the noise rate and noise type. For example, prior './avg_priors/avgp_initialm_intactpw20.npy', retrain file './retrains/cifar10retrain_intactpw20.csv' match with noise rate 0.2 with noise type pw (pairwise). For more examples, please find the example data in the given prior directory './example_data/avg_priors' and retrain file directory './example_data/retrains'. An example run would be:
+#### 1. We require PU model's prediction and matrix priors to estimate noise transition matrices, which both take some time to compute. Some example data (prior matrices and retrain csv data) is provided, please note that the prior file and retrain file should match with the noise rate and noise type. For example, prior './avg_priors/avgp_initialm_intactpw20.npy', retrain file './retrains/cifar10retrain_intactpw20.csv' match with noise rate 0.2 with noise type pw (pairwise). For more examples, please find the example data in the given prior directory './example_data/avg_priors' and retrain file directory './example_data/retrains'. An example run would be:
 
 An example: <br/>
 ```
