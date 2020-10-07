@@ -159,7 +159,7 @@ def train(train_img, given_dataset_labels, noise_ratio, class_no = 0, random_see
                 lid_loader = torch.utils.data.DataLoader(lid_data, batch_size=len(data_points[key]), shuffle=True, num_workers=2, drop_last=False)
             model.train()
 
-            ft_list = []
+        
             for i, X_train in enumerate(lid_loader):
                 X_train = X_train.to(device)
                 with torch.no_grad():
