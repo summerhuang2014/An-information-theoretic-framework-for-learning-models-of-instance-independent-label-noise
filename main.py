@@ -200,60 +200,7 @@ if args.prior_path == None: #will have to compute prior matrices
 
 if args.retrain_file_path ==  None: #will have to compute retrain csv
     assert False, 'Please compute retrain file first!'
-    '''
-    noisy_label_path = args.save_path + '/' + 'cifar10_intact_' + name + '.npy'
-    if os.path.isfile(noisy_label_path):
-        pass
-    else:
-        if not os.path.exists(args.save_path):
-            os.makedirs(args.save_path)
-        noisy_labels = tools.noisify(args.clean_label_path, args.form, args.noise_rate)
-        np.save(noisy_label_path, noisy_labels)
-
-    tools.make_determine()
-    train_data = prior_data_load.cifar10_train(args.image_path, noisy_label_path, no_rc_transform_train('cifar10'), transform_target)
-    train_loader = DataLoader(train_data, batch_size=batch_size, shuffle=True, num_workers=2, drop_last=False)
-    data_length = len(train_data)
-
-    tools.make_determine()
-    test_data = prior_data_load.cifar10_test(args.test_image_path, args.test_label_path, transform_test('cifar10'), transform_target)
-    test_loader = DataLoader(test_data, batch_size=batch_size, shuffle=False, num_workers=2, drop_last=False)
-
-    tools.make_determine()
-    model = prior_data_load.cifar_10_CNN()
-    model.fc_layer_2.train(False) 
-
-    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-    print(device)
-
-    lr = 0.01
-    weight_decay = 1e-4
-    batch_size = 128
-
-    if (torch.cuda.device_count() > 1):
-        model = nn.DataParallel(model)
-    optimizer = optim.SGD(model.parameters(), lr=lr, weight_decay=weight_decay, momentum=0.9)
-    criterion = nn.CrossEntropyLoss()
-    model = model.to(device)
-
-    N = 1280
-    no_LID_sequences = 50
-    LID_file = 'cifar10_size_' + str(data_length) + '_indices.csv'
-    if not os.path.isfile(LID_file):
-        with open(LID_file, 'a', newline='') as csvFile:
-            writer = csv.writer(csvFile)
-            for i in range(no_LID_sequences):
-                random.seed(i)
-                idx = random.sample(range(data_length), N)
-                writer.writerow(np.array(idx))
-        csvFile.close()
-    N_indices = pd.read_csv(LID_file, header=None, index_col=None)
-
-    scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=40, gamma=0.1)
-    '''
-
-
-
+   
 if args.prior_path != None and args.retrain_file_path !=  None:
 
     if not os.path.exists(args.matrix_dir):
