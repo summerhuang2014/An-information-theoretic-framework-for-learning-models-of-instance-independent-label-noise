@@ -14,11 +14,7 @@ class cifar10_dataset(Data.Dataset):
         
         given_images = np.load(data_dir)
         given_labels = np.load(label_dir)
-        #np.random.seed(random_seed)
-        #for i in range(len(original_labels)):#noisify data
-        #    original_labels[i] = np.random.choice(num_class, p=True_T[original_labels[i]])
-        #np.save('noisy.npy',original_labels)
-        #split
+
         num_samples = int(len(given_labels))
 
         np.random.seed(random_seed)
