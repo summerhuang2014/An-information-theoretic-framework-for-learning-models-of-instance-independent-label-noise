@@ -147,7 +147,7 @@ def baseline_labels(y_tr, dts, rds = 1, num_classes=10):
     if the baseline labels exist, return the baseline labels.
     else, create it.
     '''
-    data_baseline_file = "data/baseline_%s_%s_labels.npy" % (dts, rds) #this should be from kera, the old data
+    data_baseline_file = "data/baseline_%s_%s_labels.npy" % (dts, rds) 
     if os.path.isfile(data_baseline_file):
         y_tr = np.load(data_baseline_file)
     else:
