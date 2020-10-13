@@ -29,6 +29,8 @@ random_seeds = [0, 235, 905, 2048, 4096, 5192, 7813, 11946, 16860, 35715]
 
 record_file = './initial_PU_' + str(len(random_seeds)) + '_seeds.csv'
 
+#if this is training PU models for the first time, the max alpha vector is 88.3.
+#during retraining, if recall is 1, the max alpha vector used is 86.4, if recall is 0.98, then 88, etc.
 correspondence = {1: 86.4, 0.98: 88.0, 0.96: 88.2, 0.94: 88.4, 0.92: 88.5, 0.9: 88.6, 'init': 88.3}
 
 
