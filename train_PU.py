@@ -48,7 +48,7 @@ def LID_assmb(seed_no, max_a, start_ep=0, end_ep=45, loc='./log'):
 
 def train_val_PU(max_a, val, tr1, tr2, loc='./log', start_ep=0, end_ep=45):
     '''
-    this function trains a triple (a combination of 3 random seeds), then record it in a csv file.
+    this function trains a triple (a combination of 3 random seeds).
     max_a: the maximum alpha used to train the PU model.
     val: the random seed number that produces the LID sequence for test
     tr1: the 1st random seed number that produces the LID sequence for training
